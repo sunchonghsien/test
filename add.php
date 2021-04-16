@@ -6,9 +6,10 @@ $write_list = array();
     $list = is_array($list)?$list:array();
     $write_list['word'] = $_GET['word'];
     $write_list['chineseword'] = $_GET['chineseword'];
-    $write_list['example'] = $_GET['example'];
+    $write_list['example'] = $_GET['example'];https://github.com/sunchonghsien/test/blob/main/add.php
     $write_list['desc'] = $_GET['desc'];
     $write_list['type'] = $_GET['type'];
     $write_list['audio'] = $_GET['audio'];
     $list['data'][] = $write_list;
-    file_put_contents($get_json_file, json_encode($list,JSON_UNESCAPED_UNICODE));
+    $resp = file_put_contents($get_json_file, json_encode($list,JSON_UNESCAPED_UNICODE));
+    print_r($resp);
