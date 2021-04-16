@@ -12,4 +12,4 @@ $write_list = array();
     $write_list['audio'] = $_GET['audio'];
     $list['data'][] = $write_list;
     $resp = file_put_contents($get_json_file, json_encode($list,JSON_UNESCAPED_UNICODE));
-    print_r($resp);
+    print_r($_GET);
